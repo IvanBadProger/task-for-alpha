@@ -1,0 +1,6 @@
+.logo path {
+  fill: var(--secondary-color);
+}
+.logo rect {
+  fill: var(--accent-color);
+}

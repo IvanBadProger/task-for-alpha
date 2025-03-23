@@ -1,0 +1,18 @@
+.label {
+  margin-inline: 1rem;
+}
+
+.input {
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow);
+}
+
+.input::placeholder {
+  color: var(--gray-color);
+}

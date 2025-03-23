@@ -1,0 +1,17 @@
+.delete {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  top: 1rem;
+  right: 4rem;
+  color: #e74c3c;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+}

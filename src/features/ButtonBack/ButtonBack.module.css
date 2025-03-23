@@ -1,0 +1,10 @@
+.backButton {
+  margin-inline: 1rem;
+  padding: 1rem;
+  background: none;
+  border: none;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}

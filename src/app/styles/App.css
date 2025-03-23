@@ -1,0 +1,90 @@
+@import "@a1rth/css-normalize/index.css";
+
+:root {
+  --accent-color: #76eb8c;
+  --secondary-color: #ec9595;
+  --third-color: #ffd11a;
+  --gray-color: #6b6868;
+  --tomato-color: #ff5500;
+  --black-color: #111111;
+  --white-color: #f3f3f3;
+
+  --font-family: sans-serif;
+
+  --border: 1px solid var(--gray-color);
+  --border-transparent: 1px solid transparent;
+
+  --shadow: 0 0 0 2px rgb(59 130 246 / 0.5);
+}
+
+#root {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  min-height: 100vh;
+  font-family: var(--font-family);
+}
+
+main {
+  flex: 1;
+}
+
+a,
+button,
+svg *,
+input,
+textarea {
+  transition-duration: 0.2s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.active {
+  color: var(--accent-color);
+}
+
+.button {
+  border: var(--border-transparent);
+  background-color: var(--secondary-color);
+}
+
+.button:hover {
+  border-color: var(--accent-color);
+  background-color: var(--third-color);
+  color: var(--black-color);
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*:invalid {
+  border-color: var(--tomato-color);
+}
+
+input {
+  border: var(--border);
+}
