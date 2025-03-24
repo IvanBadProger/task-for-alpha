@@ -4,7 +4,6 @@ import {
 } from "@/app/store/categoriesSlice"
 import { useAppDispatch, useAppSelector } from "@/app/store/hooks"
 import { addProduct } from "@/app/store/productsSlice"
-import { Product } from "@/shared"
 import { Input } from "@/shared/ui/Input/Input"
 import { useEffect } from "react"
 import { SubmitHandler, useForm } from "react-hook-form"
