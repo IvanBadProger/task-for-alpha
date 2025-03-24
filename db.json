@@ -11,27 +11,47 @@
       "rating": 2
     },
     {
-      "id": "4",
-      "title": "Кофе в зернах Бразилия Серрадо",
-      "description": "Сбалансированный кофе со средней плотностью и шоколадными нотами. В послевкусии чувствуются оттенки ореха и карамели. Отлично подходит для эспрессо и молочных напитков.",
-      "price": 1300,
-      "category": "coffee",
-      "image": "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "isLiked": false,
-      "rating": 4
-    },
-    {
       "id": "5",
       "title": "Пуэр Шу Юннань",
       "description": "Выдержанный пуэр 2018 года с глубоким землистым вкусом и древесными нотами. Обладает согревающим эффектом и помогает улучшить пищеварение.",
       "price": 3500,
       "category": "tea",
       "image": "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "isLiked": false,
+      "isLiked": true,
       "rating": 3
     },
     {
       "id": "6",
+      "title": "Органический зеленый чай Сенча",
+      "description": "Премиальный японский зеленый чай с мягким травянистым вкусом и нотками морских водорослей. Содержит множество антиоксидантов и L-теанин для естественного повышения концентрации внимания.",
+      "price": 1200,
+      "category": "tea",
+      "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3",
+      "isLiked": false,
+      "rating": 4
+    },
+    {
+      "id": "10",
+      "title": "Улун Те Гуань Инь",
+      "description": "Знаменитый китайский улун с насыщенным цветочным ароматом и сладковатым послевкусием. Может завариваться до 5-7 раз, раскрывая новые грани вкуса с каждой заваркой.",
+      "price": 2200,
+      "category": "tea",
+      "image": "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isLiked": false,
+      "rating": 2
+    },
+    {
+      "id": "11",
+      "title": "Пуэр Шу Юннань",
+      "description": "Выдержанный пуэр 2018 года с глубоким землистым вкусом и древесными нотами. Обладает согревающим эффектом и помогает улучшить пищеварение.",
+      "price": 3500,
+      "category": "tea",
+      "image": "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "isLiked": true,
+      "rating": 3
+    },
+    {
+      "id": "121",
       "title": "Органический зеленый чай Сенча",
       "description": "Премиальный японский зеленый чай с мягким травянистым вкусом и нотками морских водорослей. Содержит множество антиоксидантов и L-теанин для естественного повышения концентрации внимания.",
       "price": 1200,
@@ -61,7 +81,7 @@
       "rating": 0
     },
     {
-      "id": "642dd40d-3409-4f85-b012-fb6c800c9aec",
+      "id": "9955c40c-1f6e-4db3-b8f3-5e06e645f21b",
       "title": "Женщина - чай :)",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, tempore!",
       "price": 9999,
@@ -69,6 +89,16 @@
       "category": "tea",
       "rating": 0,
       "isLiked": true
+    },
+    {
+      "id": "87816354-1401-4854-864e-8fb9c1b072dd",
+      "title": "Женщина - чай :)",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, tempore!",
+      "price": 9999,
+      "image": "https://images.unsplash.com/photo-1742567009397-c64925e0c3ba?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "tea",
+      "rating": 0,
+      "isLiked": false
     }
   ],
   "categories": [

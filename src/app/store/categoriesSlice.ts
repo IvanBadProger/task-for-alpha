@@ -32,6 +32,7 @@ export const categoriesSlice = createSlice({
     builder
       .addCase(fetchCategories.fulfilled, (state, action) => {
         state.categories = action.payload
+        state.status = "success"
       })
       .addCase(fetchCategories.pending, (state) => {
         state.status = "loading"

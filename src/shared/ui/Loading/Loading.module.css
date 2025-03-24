@@ -1,6 +1,11 @@
 .load {
-  width: 50px;
   --b: 8px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: -50% -50%;
+  width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
   padding: 1px;

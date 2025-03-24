@@ -11,6 +11,7 @@ import { ButtonLike } from "@/features/ButtonLike/ButtonLike"
 import { ButtonDeleteProduct } from "@/features/ButtonDeleteProduct/ButtonDeleteProduct"
 import { ButtonBack } from "@/features/ButtonBack/ButtonBack"
 import { Price } from "@/widgets/Price/Price"
+import { CategoryTag } from "@/widgets/CategoryTag/CategoryTag"
 
 export const AboutProductPage = () => {
   const { id } = useParams()
@@ -27,8 +28,24 @@ export const AboutProductPage = () => {
   }, [id])
 
   if (!product) {
-    return <span>Продукт не найден</span>
+    return (
+      <>
+        <ButtonBack />
+        <span>Продукт не найден</span>
+      </>
+    )
   }
+
+  const {
+    image,
+    title,
+    category,
+    description,
+    isLiked,
+    price,
+    rating,
+    id: productId,
+  } = product
 
   return (
     <div className={styles.productPage}>
@@ -36,29 +53,22 @@ export const AboutProductPage = () => {
 
       <div className={styles.product}>
         <div className={styles.imageContainer}>
-          <img
-            src={product.image}
-            alt={product.title}
-            className={styles.image}
-          />
-          <RatingLine rating={product.rating} />
+          <img src={image} alt={title} className={styles.image} />
+          <RatingLine rating={rating} />
         </div>
 
         <div className={styles.info}>
-          <h1 className={styles.title}>{product.title}</h1>
+          <h1 className={styles.title}>{title}</h1>
 
-          <div className={styles.category}>{product.category}</div>
+          <CategoryTag categoryName={category} />
 
-          <Price price={product.price} />
+          <Price price={price} />
 
-          <p className={styles.description}>{product.description}</p>
+          <p className={styles.description}>{description}</p>
 
           <div className={styles.actions}>
-            <ButtonLike
-              productId={product.id}
-              isLiked={product.isLiked}
-            />
-            <ButtonDeleteProduct productId={product.id} />
+            <ButtonLike productId={productId} isLiked={isLiked} />
+            <ButtonDeleteProduct productId={productId} />
           </div>
         </div>
       </div>

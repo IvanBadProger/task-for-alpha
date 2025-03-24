@@ -41,4 +41,43 @@ export const Icons = {
       </svg>
     )
   },
+  Cross: () => {
+    return (
+      <svg
+        width="10"
+        height="10"
+        viewBox="0 0 10 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 1L5 5M5 5L9 9M5 5L9 1M5 5L1 9"
+          stroke="black"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+      </svg>
+    )
+  },
+  Back: () => {
+    return (
+      <svg
+        width="22"
+        height="20"
+        viewBox="0 0 22 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M21 18.418C18.5533 15.4313 16.3807 13.7367 14.482 13.334C12.5833 12.9313 10.7757 12.8705 9.059 13.1515V18.5L1 9.7725L9.059 1.5V6.5835C12.2333 6.6085 14.932 7.74733 17.155 10C19.3777 12.2527 20.6593 15.0587 21 18.418Z"
+          fill="black"
+          stroke="black"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+      </svg>
+    )
+  },
 }

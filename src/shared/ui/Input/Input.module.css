@@ -1,3 +1,9 @@
+.wrapper {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+}
+
 .label {
   margin-inline: 1rem;
 }

@@ -16,7 +16,7 @@ export const Input = (props: InputProps) => {
   } = props
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <label
         className={clsx(
           { "visually-hidden": isLabelHidden },

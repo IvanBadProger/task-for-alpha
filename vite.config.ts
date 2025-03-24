@@ -4,6 +4,7 @@ import path from "path"
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/task-for-alpha/",
   plugins: [react()],
   resolve: {
     alias: {

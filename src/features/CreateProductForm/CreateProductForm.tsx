@@ -9,8 +9,9 @@ import { Input } from "@/shared/ui/Input/Input"
 import { useEffect } from "react"
 import { SubmitHandler, useForm } from "react-hook-form"
 import styles from "./CreateProductForm.module.css"
+import clsx from "clsx"
 
-const DEFAULT_VALUES = {
+const SUPER_VALUES = {
   IMAGE:
     "https://images.unsplash.com/photo-1742567009397-c64925e0c3ba?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   TITLE: "Женщина - чай :)",
@@ -19,7 +20,7 @@ const DEFAULT_VALUES = {
   PRICE: 9999,
 }
 
-export type Inputs = {
+export type CreateProductFormInputs = {
   title: string
   description: string
   price: number
@@ -29,7 +30,7 @@ export type Inputs = {
 
 export const CreateProductForm = () => {
   const { register, handleSubmit, setValue, reset } =
-    useForm<Inputs>()
+    useForm<CreateProductFormInputs>()
   const { categories, status } = useAppSelector(selectCategories)
   const dispatch = useAppDispatch()
 
@@ -37,29 +38,32 @@ export const CreateProductForm = () => {
     if (status === "idle") {
       dispatch(fetchCategories())
     }
-  })
+  }, [])
 
-  const onSubmit: SubmitHandler<Inputs> = (formData) => {
+  const onSubmit: SubmitHandler<CreateProductFormInputs> = (
+    formData
+  ) => {
     if (!formData.title || !formData.image || !formData.price) {
       return alert("Обязательные поля: название, изображение, цена")
     }
 
-    const data: Product = {
-      ...formData,
-      id: crypto.randomUUID(),
-      rating: 0,
-      isLiked: false,
-    }
+    dispatch(
+      addProduct({
+        ...formData,
+        id: crypto.randomUUID(),
+        rating: 0,
+        isLiked: false,
+      })
+    )
 
-    dispatch(addProduct(data))
     reset()
   }
 
   const insertDefaulValues = () => {
-    setValue("title", DEFAULT_VALUES.TITLE)
-    setValue("description", DEFAULT_VALUES.DESCRIPTION)
-    setValue("price", DEFAULT_VALUES.PRICE)
-    setValue("image", DEFAULT_VALUES.IMAGE)
+    setValue("title", SUPER_VALUES.TITLE)
+    setValue("description", SUPER_VALUES.DESCRIPTION)
+    setValue("price", SUPER_VALUES.PRICE)
+    setValue("image", SUPER_VALUES.IMAGE)
     if (categories.length > 0) {
       setValue("category", categories[0].name)
     }
@@ -93,11 +97,19 @@ export const CreateProductForm = () => {
       </div>
 
       <div className={styles.buttons}>
-        <button type="submit">Добавить</button>
-        <button type="button" onClick={insertDefaulValues}>
-          Вставить дефолтные значения
+        <button className={clsx("button")} type="submit">
+          Добавить продукт
         </button>
-        <button type="reset">Сбросить значения</button>
+        <button
+          className={clsx("button")}
+          type="button"
+          onClick={insertDefaulValues}
+        >
+          Вставить значения супер чая
+        </button>
+        <button className={clsx("button")} type="reset">
+          Очистить поля
+        </button>
       </div>
     </form>
   )

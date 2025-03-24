@@ -3,8 +3,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 1rem;
+  column-gap: 2rem;
 }
 
 .footer {
+  border-top: var(--border);
+}
+
+.header {
+  border-bottom: var(--border);
+  font-size: 1.25rem;
+}
+
+.header,
+.footer {
+  padding-block: 1rem;
 }

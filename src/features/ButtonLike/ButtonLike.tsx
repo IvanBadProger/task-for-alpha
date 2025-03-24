@@ -4,11 +4,16 @@ import clsx from "clsx"
 import styles from "./ButtonLike.module.css"
 import { Icons } from "@/shared"
 
-type ButtonLikeProps = { isLiked: boolean; productId: string }
+type ButtonLikeProps = {
+  isLiked: boolean
+  productId: string
+  className?: string
+}
 
 export const ButtonLike = ({
   isLiked,
   productId,
+  className,
 }: ButtonLikeProps) => {
   const dispatch = useAppDispatch()
 
@@ -27,7 +32,7 @@ export const ButtonLike = ({
 
   return (
     <button
-      className={clsx(styles.like)}
+      className={clsx(styles.like, className)}
       type="button"
       title={labelButtonLike}
       aria-label={labelButtonLike}

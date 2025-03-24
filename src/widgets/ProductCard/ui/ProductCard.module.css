@@ -2,9 +2,8 @@
   position: relative;
   width: 100%;
   max-width: 400px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: var(--white-color);
+  box-shadow: var(--shadow);
   transition-duration: 0.2s;
 }
 
@@ -32,13 +31,8 @@
   min-height: 200px;
 }
 
-.category {
-  color: var(--gray-color);
-  text-transform: uppercase;
-}
-
 .title {
-  font-size: 18px;
+  font-size: 1.1rem;
   display: -webkit-box;
   line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -56,14 +50,13 @@
   height: 80px;
 }
 
-.rating {
-  display: inline-flex;
-  justify-content: center;
-  column-gap: 0.25rem;
+.action {
+  position: absolute;
+  top: 1rem;
 }
-
-.star {
-  width: 2rem;
-  height: 2rem;
-  color: #ffd700;
+.like {
+  right: 2rem;
+}
+.delete {
+  right: 5rem;
 }

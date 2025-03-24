@@ -20,14 +20,14 @@ type navItem = {
 export const Header = () => {
   const headerNavItems: navItem[] = [
     { to: "/create-product", content: "Создать продукт" },
-    { to: "/", content: "Продукты" },
+    { to: "/", content: "Каталог" },
   ]
 
   return (
     <header className={styles.header}>
       <Logo />
       <nav>
-        <ul>
+        <ul className={styles.nav}>
           {headerNavItems.map(({ to, content }, index) => (
             <li key={index}>
               <NavLink to={to}>{content}</NavLink>

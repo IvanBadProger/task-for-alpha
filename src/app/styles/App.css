@@ -8,6 +8,7 @@
   --tomato-color: #ff5500;
   --black-color: #111111;
   --white-color: #f3f3f3;
+  --blue-color: #2c3e50;
 
   --font-family: sans-serif;
 
@@ -20,7 +21,7 @@
 #root {
   max-width: 80vw;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0.75rem 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -47,10 +48,16 @@ a {
 }
 
 a.active {
-  color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+a:hover {
+  color: var(--blue-color);
 }
 
 .button {
+  padding: 1rem;
+  border-radius: 1rem;
   border: var(--border-transparent);
   background-color: var(--secondary-color);
 }
@@ -59,6 +66,12 @@ a.active {
   border-color: var(--accent-color);
   background-color: var(--third-color);
   color: var(--black-color);
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.button:active {
+  transform: translateY(0);
 }
 
 ul,
