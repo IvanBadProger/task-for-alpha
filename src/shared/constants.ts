@@ -1,5 +1,6 @@
 // export const BASE_URL = "http://localhost:3000"
-export const BASE_URL = "https://your-vercel-app.vercel.app/api"
+export const BASE_URL =
+  "https://my-json-server.typicode.com/IvanBadProger/task-for-alpha-json"
 
 export const API_ENDPOINTS = {
   PRODUCTS: {
