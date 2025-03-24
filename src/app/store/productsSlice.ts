@@ -7,6 +7,7 @@ import { StateStatus } from "./types"
 export const fetchProducts = createAsyncThunk(
   "products/fetchAll",
   async () => {
+    console.log(API_ENDPOINTS.PRODUCTS.GET_ALL)
     const res = await fetch(API_ENDPOINTS.PRODUCTS.GET_ALL)
     const products = await res.json()
 

@@ -3,11 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://IvanBadProger/github.io/task-for-alpha",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview",
+    "start": "vite preview",
     "server": "json-server db.json",
     "deploy": "gh-pages -d dist"
   },
